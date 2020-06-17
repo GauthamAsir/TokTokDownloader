@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:id="@+id/c1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="12dp"
+            android:hint="@string/copy_tik_tok_video_link_nclick_on_download"
+            android:gravity="center"
+            android:textSize="21sp"/>
+
+        <Button
+            android:id="@+id/download_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/download"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:textSize="21sp"
+            android:onClick="download"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlayBackground"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/my_downloads_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:background="?selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/my_downloads_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_folder_download"
+                android:tint="@color/grey"
+                tools:ignore="NestedWeights"
+                android:transitionName="@string/change_bounds"
+                android:contentDescription="@string/my_downloads"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/my_downloads"
+                android:gravity="center"
+                android:textColor="@color/grey"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:background="?selectableItemBackground">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_dashboard_black_24dp"
+                android:tint="@color/colorPrimaryDark"
+                tools:ignore="NestedWeights"
+                android:contentDescription="@string/dashboard"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/dashboard"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_bt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:background="?selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/settings_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_settings"
+                android:tint="@color/grey"
+                tools:ignore="NestedWeights"
+                android:transitionName="@string/change_bounds"
+                android:contentDescription="@string/settings"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/settings"
+                android:gravity="center"
+                android:textColor="@color/grey"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

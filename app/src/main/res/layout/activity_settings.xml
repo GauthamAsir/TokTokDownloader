@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="@color/colorPrimary">
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_settings"
+            android:tint="?android:textColorPrimary"
+            android:contentDescription="@string/settings"
+            android:transitionName="@string/change_bounds"
+            android:padding="4dp"/>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/settings"
+            android:gravity="center_vertical"
+            android:textSize="21sp"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="24dp"
+        android:elevation="12dp"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/how_to_use"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_outline_info_24"
+                    android:contentDescription="@string/how_to_use" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/how_to_use"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:textAppearanceLarge"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/shareApp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_share_24"
+                    android:contentDescription="@string/share_our_app"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/share_our_app"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:textAppearanceLarge"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_help_outline_24"
+                    android:contentDescription="@string/contact_us"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/contact_us"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:textAppearanceLarge"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_perm_device_information_24"
+                    android:contentDescription="@string/about"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/about"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:textAppearanceLarge"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
