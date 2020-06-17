@@ -1,14 +1,13 @@
 package a.gautham.toktokdownloader;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
@@ -32,7 +31,7 @@ public class Settings extends AppCompatActivity {
         shareApp.setOnClickListener(v -> {
             Intent shareIntent =   new Intent(android.content.Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
-            String app_url = "https://github.com/GauthamAsir/WhatsApp_Status_Saver/releases";
+            String app_url = "https://github.com/GauthamAsir/TokTokDownloader/releases";
             shareIntent.putExtra(Intent.EXTRA_TEXT,
                     "Download Tik-Tok videos without any watermark\nNo worries about privacy, im not requesting any permission in app \n\n" + app_url);
             shareIntent.putExtra(Intent.EXTRA_SUBJECT,"Tik-Tok Downloader without watermark");
