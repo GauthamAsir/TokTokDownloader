@@ -47,6 +47,8 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import a.gautham.library.AppUpdater;
+import a.gautham.library.helper.Display;
 import a.gautham.toktokdownloader.helpers.ConnectivityService;
 
 import static android.content.ClipDescription.MIMETYPE_TEXT_PLAIN;
@@ -126,6 +128,12 @@ public class MainActivity extends AppCompatActivity {
         percent_pg = view.findViewById(R.id.percent_pg);
 
         pgDialog = dialog.create();
+
+        //App Updater
+        AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.setDisplay(Display.DIALOG);
+        appUpdater.setUpGithub("GauthamAsir", "TokTokDownloader");
+        appUpdater.start();
 
     }
 
