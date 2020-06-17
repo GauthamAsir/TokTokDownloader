@@ -10,7 +10,9 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        Date date = new Date()
+        String d = date.format('_ddMMYYYY')
+        setProperty("archivesBaseName", "Tik-Tok-Downloader-No-watermark_v$versionName$d")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
